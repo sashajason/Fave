@@ -1,0 +1,43 @@
+/* 
+equal card height */
+.row-equal > div[class*='col-'] {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.row-equal .carousel-item-container .card {
+   width: 100%;
+}
+
+.card {
+    text-align: center;
+    background: linear-gradient(#C8B273, #C8B273, #FFFFFF);
+}
+
+/* ensure equal card height inside carousel */
+.carousel-inner>.row-equal.active, 
+.carousel-inner>.row-equal.next, 
+.carousel-inner>.row-equal.prev {
+    display: flex;
+}
+
+/* prevent flicker during transition */
+.carousel-inner>.row-equal.active.left, 
+.carousel-inner>.row-equal.active.right {
+    opacity: 0.5;
+    display: flex;
+}
+
+#carousel-icons {
+    height: 30px;
+  }
+
+  #carousel-icon-text{
+      font-size: 10px;
+  }
+
+/* control image height */
+.card-img-top-250 {
+    max-height: 250px;
+    overflow: wrap;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- References -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/button.css">
+    <link rel="stylesheet" href="styles/social-buttons.css">
+
+
+
+    <meta charset="utf-8">
+
+    <title>
+        Fave
+    </title>
+
+    <link rel="icon" href="Logo/icon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+      <!-- Page Header -->
+  <header class="faveHeader" id="header">
+    <header-component></header-component>
+  </header>
+
+    <container class="container-fluid">
+        <div class="row ml-0 mr-0">
+            <div class="artistHeader-img">
+                <div class="top-left artistHeader-image-description">Golden Era Hip Hop auf Fave</div>
+            </div>
+        </div>
+        <div class="row ml-4">
+            <div class="col-5 col-artist-information">
+                <!-- Profile Image -->
+                <div class="row mt-2">
+                    <img src="Slides/wutang.jpg" class="rounded-circle" height="100" width="100">
+                </div>
+                <div class="row">
+                    <h2 class="mt-4">Wu-Tang Clan</h2>
+                </div>
+                <div class="row">
+                    <p>
+                        Wenn sich überhaupt irgendeine Crew mit dem Titel "Supergroup" schmücken darf, dann der Wu-Tang
+                        Clan. Neun Herren aus Staten Island und Brooklyn machen sich Anfang der 90er Jahre auf, ein
+                        Rap-Imperium aufzubauen, das die kopfnickende Welt aus den Angeln heben soll.
+                    </p>
+                </div>
+                <div class="row mt-4">
+                    <div class="center">
+                        <div id="social-buttons-artist">
+                            <ul class="list-unstyled list-inline social text-center">
+                                <li class="list-inline-item"><a
+                                        href="https://www.facebook.com/events/2471121826497016/"><i
+                                            class="fa fa-facebook"></i></a></li>
+                                <li class="list-inline-item"><a
+                                        href="https://www.youtube.com/channel/UCl0q_XqiWDMA-Q9SzUO3y-Q"><i
+                                            class="fa fa-youtube"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/wutangclan/?hl=de"><i
+                                            class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mt-3">
+                <div class="row">
+                    <div class="col" style="text-align: center">
+                        <img id="artistpage-icons" src="Icons/pot.png">
+                        <h5>CHF 3564.00</h5>
+                    </div>
+                    <div class="col" style="text-align: center;">
+                        <img class="ml-4" id="artistpage-icons" src="Icons/votes.png">
+                        <h5> 569 Votes</h5>
+                    </div>
+                </div>
+                <div class="row justify-content-center row-vote">
+                    <button class="draw vote" style="margin: 1em; padding: 1em 2em;">Vote</button>
+                </div>
+            </div>
+        </div>
+    </container>
+
+   <!-- Footer -->
+   <section id="footer" class="faveFooter">
+    <footer-component></footer-component>
+  </section>
+  <!-- ./Footer -->
+
+    <!-- Js References -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue"></script>
+
+<script src="script/components/header.js"></script>
+<script src="script/components/footer.js"></script>
+</body>
+
+</html>

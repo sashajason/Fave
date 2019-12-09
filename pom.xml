@@ -28,10 +28,16 @@
         </dependency>
         
         <!-- Konnektor, um auf MySQL-Datenbanken zugreifen zu können -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
+        <!-- <dependency> -->
+            <!-- <groupId>mysql</groupId> -->
+            <!-- <artifactId>mysql-connector-java</artifactId> -->
+        <!-- </dependency> -->
+		
+		<!-- Konnektor, um auf SQL Server-Datenbanken zugreifen zu können -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+		</dependency>
     </dependencies>
     
     <!-- The Spring Boot Maven Plugin provides Spring Boot support in Maven, 

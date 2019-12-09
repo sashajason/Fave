@@ -1,0 +1,118 @@
+#header {
+	background: -webkit-linear-gradient(right,#C8B273, #C8B273, gray)
+}
+.faveHeader{
+	background-color:#292c2f;
+	box-shadow:0 1px 1px #ccc;
+	padding: 20px 40px;
+	height: 80px;
+	color: #ffffff;
+	box-sizing: border-box;
+}
+
+.faveHeader .faveHeader-limiter h1{
+	float: left;
+	line-height: 30px;
+}
+
+/* The navigation links */
+
+.faveHeader .faveHeader-limiter a {
+	color: #ffffff;
+}
+
+.faveHeader .faveHeader-limiter nav {
+	font:16px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: left;
+	margin: 0 0 0 60px;
+	padding: 0;
+}
+
+.faveHeader .faveHeader-limiter nav a{
+	font-size: 14px;
+	display: inline-block;
+	padding: 0 5px;
+	opacity: 0.9;
+	text-decoration:none;
+	line-height: 1;
+}
+
+.faveHeader .faveHeader-limiter nav a:hover {
+	opacity: 1;
+	font-weight: 700 ;
+	margin-left:5px;
+}
+.faveHeader .faveHeader-limiter nav a{
+	margin: 10px;
+padding: 3px 0;
+-webkit-transition: .5s all ease;
+-moz-transition: .5s all ease;
+transition: .5s all ease;
+}
+
+.faveHeader .faveHeader-limiter nav a.selected {
+	color: #608bd2;
+}
+
+/* Login/Sign up buttons */
+.faveHeader .faveHeader-limiter ul {
+	font: 14px Arial, Helvetica, sans-serif;
+	list-style: none;
+	line-height: 1;
+	float: right;
+}
+
+.faveHeader .faveHeader-limiter ul li {
+	display: inline-block;
+	margin-left: 15px;
+	opacity:0.9;
+}
+
+.faveHeader .faveHeader-limiter ul li:hover{
+	opacity: 1;
+}
+
+/* The sign up button */
+
+.faveHeader .faveHeader-limiter ul li:last-child a {
+	font-weight: bold;
+	background-color: #3a3c3e;
+	padding: 10px 15px;
+	border-radius: 3px;
+}
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+	.faveHeader {
+		padding: 25px;
+		height: 85px;
+	}
+
+	.faveHeader .faveHeader-limiter h1 {
+		float: none;
+		margin: -8px 0 2px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.faveHeader .faveHeader-limiter nav {
+		margin: 0;
+		float: none;
+	}
+
+	.faveHeader .faveHeader-limiter nav li a {
+		font-size: 15px;
+	}
+
+	.faveHeader .faveHeader-limiter ul.loginlinks {
+		display: none;
+	}
+
+	.faveHeader nav.headerNav a:hover i {
+		font-weight: 700 ;
+	}
+}
