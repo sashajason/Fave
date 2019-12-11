@@ -53,10 +53,10 @@ Vue.component('carouselcardcomponent', {
           axios.get('http://localhost:8080/fave/artists')
             .then((response) => {
               for (i = 0; i < response.data.length; i++) {
-                if (i < 5) {
+                if (i < 4) {
                   this.artistsRow1.push(response.data[i])
                 }
-                else if (i < 9){
+                else if (i < 8){
                   this.artistsRow2.push(response.data[i])
                 }
               }
