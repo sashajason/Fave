@@ -50,7 +50,7 @@ Vue.component('carouselcardcomponent', {
           // HTTP.Request
           // TODO: Get Names Array 
   
-          axios.get('http://localhost:8080/fave/artists')
+          axios.get('http://localhost:8080/fave/artists') 
             .then((response) => {
               for (i = 0; i < response.data.length; i++) {
                 if (i < 4) {
