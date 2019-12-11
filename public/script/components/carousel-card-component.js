@@ -26,7 +26,7 @@ Vue.component('carouselcardcomponent', {
                 <img id="carousel-icons" src="Icons/pot.png">
                 <p id="carousel-icon-text">{{investition}}</p>
               </div>
-            </div>
+            </div> 
             <vote-button-component v-bind:anzvotes="anzvotes" v-bind:investition="investition" v-bind:artistid="artistid"></vote-button-component>
         </div>
         </div>
