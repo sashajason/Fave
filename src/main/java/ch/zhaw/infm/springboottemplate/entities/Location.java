@@ -8,52 +8,63 @@ import javax.persistence.Id;
 @Entity
 public class Location {
 
+	public Location(String name, String strasse, int plz, String ort) {
+		this.name = name;
+		this.strasse = strasse;
+		this.plz = plz;
+		this.ort = ort;
+	}
+
+	public Location() {
+		super();
+	}
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long locationId;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long locationId;
 
-    public Long getLocationId() {
-        return locationId;
-    }
-    
- private String name;
-    
-    public String getName() {
-    	return name;
-    }
+	public Long getLocationId() {
+		return locationId;
+	}
 
-    public void setName(String name) {
-    	this.name = name;
-    }
-    
- private String strasse;
-    
-    public String getStrasse() {
-    	return strasse;
-    }
+	private String name;
 
-    public void setStrasse(String strasse) {
-    	this.strasse = strasse;
-    }
-    
- private int plz;
-    
-    public int getPlz() {
-    	return plz;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setPlz(int plz) {
-    	this.plz = plz;
-    }
-	
- private String ort;
-    
-    public String getOrt() {
-    	return ort;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setOrt(String ort) {
-    	this.ort = ort;
-    }
-    
+	private String strasse;
+
+	public String getStrasse() {
+		return strasse;
+	}
+
+	public void setStrasse(String strasse) {
+		this.strasse = strasse;
+	}
+
+	private int plz;
+
+	public int getPlz() {
+		return plz;
+	}
+
+	public void setPlz(int plz) {
+		this.plz = plz;
+	}
+
+	private String ort;
+
+	public String getOrt() {
+		return ort;
+	}
+
+	public void setOrt(String ort) {
+		this.ort = ort;
+	}
+
 }

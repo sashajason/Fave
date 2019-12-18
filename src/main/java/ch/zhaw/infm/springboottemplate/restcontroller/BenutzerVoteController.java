@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.zhaw.infm.springboottemplate.entities.BenutzerVote;
-import ch.zhaw.infm.springboottemplate.entities.Veranstaltung;
 import ch.zhaw.infm.springboottemplate.repositories.BenutzerVoteRepository;
 
 @RestController

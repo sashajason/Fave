@@ -13,10 +13,24 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class ArtistSocialMediaLink implements Serializable {
 
-	public  ArtistSocialMediaLink (Artist artist){
-		this.artist= artist;
+	public ArtistSocialMediaLink(@NotNull Artist artist, String spotify, String instagram,
+			String youtube, String facebook, String twitter) {
+		this.artist = artist;
+		this.spotify = spotify;
+		this.instagram = instagram;
+		this.youtube = youtube;
+		this.facebook = facebook;
+		this.twitter = twitter;
 	}
-	
+
+	public ArtistSocialMediaLink() {
+		super();
+	}
+
+	public ArtistSocialMediaLink(Artist artist) {
+		this.artist = artist;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long artistSocialMediaLinkId;

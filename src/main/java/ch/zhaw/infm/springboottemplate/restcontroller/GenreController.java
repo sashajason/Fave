@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ch.zhaw.infm.springboottemplate.entities.BenutzerVote;
 import ch.zhaw.infm.springboottemplate.entities.Genre;
 import ch.zhaw.infm.springboottemplate.repositories.GenreRepository;
 

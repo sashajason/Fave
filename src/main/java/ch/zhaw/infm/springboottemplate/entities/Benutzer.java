@@ -9,6 +9,17 @@ import javax.persistence.Inheritance;
 @Entity
 @Inheritance
 public class Benutzer {
+	
+	public Benutzer(String email, String benutzername, String passwort) {
+		this.email = email;
+		this.benutzername = benutzername;
+		this.passwort = passwort;
+	}
+	
+	public Benutzer()
+	{
+		super();
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +29,7 @@ public class Benutzer {
 		return benutzerId;
 	}
 
-		private String email;
+	private String email;
 
 	public String getEmail() {
 		return this.email;

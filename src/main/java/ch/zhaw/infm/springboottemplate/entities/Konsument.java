@@ -7,8 +7,20 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-public class Konsument extends Benutzer{
-	
+public class Konsument extends Benutzer {
+
+	public Konsument(String email, String benutzername, String passwort, String name, String vorname,
+			Date geburtsdatum) {
+		super(email, benutzername, passwort);
+		this.name = name;
+		this.vorname = vorname;
+		this.geburtsdatum = geburtsdatum;
+	}
+
+	public Konsument() {
+		super();
+	}
+
 	private String name;
 
 	public String getName() {

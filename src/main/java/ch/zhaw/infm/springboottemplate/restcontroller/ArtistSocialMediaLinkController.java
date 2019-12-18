@@ -14,10 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.zhaw.infm.springboottemplate.entities.ArtistSocialMediaLink;
-import ch.zhaw.infm.springboottemplate.entities.Genre;
-import ch.zhaw.infm.springboottemplate.entities.Veranstaltung;
 import ch.zhaw.infm.springboottemplate.repositories.ArtistSocialMediaLinkRepository;
-import ch.zhaw.infm.springboottemplate.repositories.GenreRepository;
 
 @RestController
 public class ArtistSocialMediaLinkController {

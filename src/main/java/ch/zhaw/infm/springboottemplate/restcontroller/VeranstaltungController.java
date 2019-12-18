@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import ch.zhaw.infm.springboottemplate.entities.Artist;
-import ch.zhaw.infm.springboottemplate.entities.Location;
 import ch.zhaw.infm.springboottemplate.entities.Veranstaltung;
 import ch.zhaw.infm.springboottemplate.repositories.VeranstaltungRepository;
 

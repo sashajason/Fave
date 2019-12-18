@@ -13,65 +13,73 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Veranstaltung {
 
-	public Veranstaltung(Location location) {
+	public Veranstaltung(@NotNull Location location, Date datum, boolean ausverkauft, int anzBesucher,
+			float investition) {
 		this.location = location;
+		this.datum = datum;
+		this.ausverkauft = ausverkauft;
+		this.anzBesucher = anzBesucher;
+		this.investition = investition;
 	}
-	
+
+	public Veranstaltung() {
+		super();
+	}
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long veranstaltungId;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long veranstaltungId;
 
-    public Long getVeranstaltungId() {
-        return veranstaltungId;
-    }
-	
-    @OneToOne
-    @NotNull
-    private Location location;
+	public Long getVeranstaltungId() {
+		return veranstaltungId;
+	}
 
-    public Location getLocation() {
-        return location;
-    }
-    
-    @Temporal(TemporalType.DATE)
-    public Date datum;
-    
-    public Date getDatum() {
-    	return this.datum;
-    }
-    
-       
-    public void setDatum(Date datum) {
-    	 this.datum = datum;
-    }
-       
-    private boolean ausverkauft;
-    
-    public boolean getAusverkauft() {
-    	return this.ausverkauft;
-    }
-    
-    public void setAusverkauft(boolean ausverkauft) {
-    	this.ausverkauft = ausverkauft;
-    }
-    
-    private int anzBesucher;
-    
-    public int getAnzBesucher() {
-    	return this.anzBesucher;
-    }
-    
-    public void setAnzBesucher(int anzBesucher) {
-    	this.anzBesucher = anzBesucher;
-    }
-    
-    private float investition;
-    
-    public float getInvestition(){
-    	return this.investition;
-    }
-    
-    public void setInvestition(float investition) {
-    	this.investition = investition;
-    }
+	@OneToOne
+	@NotNull
+	private Location location;
+
+	public Location getLocation() {
+		return location;
+	}
+
+	@Temporal(TemporalType.DATE)
+	public Date datum;
+
+	public Date getDatum() {
+		return this.datum;
+	}
+
+	public void setDatum(Date datum) {
+		this.datum = datum;
+	}
+
+	private boolean ausverkauft;
+
+	public boolean getAusverkauft() {
+		return this.ausverkauft;
+	}
+
+	public void setAusverkauft(boolean ausverkauft) {
+		this.ausverkauft = ausverkauft;
+	}
+
+	private int anzBesucher;
+
+	public int getAnzBesucher() {
+		return this.anzBesucher;
+	}
+
+	public void setAnzBesucher(int anzBesucher) {
+		this.anzBesucher = anzBesucher;
+	}
+
+	private float investition;
+
+	public float getInvestition() {
+		return this.investition;
+	}
+
+	public void setInvestition(float investition) {
+		this.investition = investition;
+	}
 }

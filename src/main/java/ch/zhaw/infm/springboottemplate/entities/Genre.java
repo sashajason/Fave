@@ -10,6 +10,14 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Genre implements Serializable {
 
+	public Genre(@NotNull String bezeichnung) {
+		this.bezeichnung = bezeichnung;
+	}
+
+	public Genre() {
+		super();
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long genreId;

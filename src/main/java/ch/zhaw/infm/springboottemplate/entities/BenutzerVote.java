@@ -9,31 +9,38 @@ import javax.persistence.OneToOne;
 @Entity
 public class BenutzerVote {
 
+	public BenutzerVote(Benutzer benutzer, Artist artist, float investition) {
+		this.benutzer = benutzer;
+		this.artist = artist;
+		this.investition = investition;
+	}
+
+	public BenutzerVote() {
+		super();
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long benutzerVoteId;
-	
+
 	@OneToOne
 	private Benutzer benutzer;
-	
+
 	@OneToOne
 	private Artist artist;
-	
-    public Artist getArtist() {
-        return artist;
-    }
-	
+
+	public Artist getArtist() {
+		return artist;
+	}
+
 	private float investition;
-	
+
 	public float getInvestition() {
 		return this.investition;
 	}
-	
+
 	public void setInvestition(float investition) {
 		this.investition = investition;
 	}
-	
-	
-	
-	
+
 }
