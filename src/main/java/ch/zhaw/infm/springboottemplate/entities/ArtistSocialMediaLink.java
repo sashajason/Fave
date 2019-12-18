@@ -43,7 +43,7 @@ public class ArtistSocialMediaLink implements Serializable {
 		return spotify;
 	}
 
-	public void setSpotifyId(String spotify) {
+	public void setSpotify(String spotify) {
 		this.spotify = spotify;
 	}
 
@@ -53,7 +53,7 @@ public class ArtistSocialMediaLink implements Serializable {
 		return instagram;
 	}
 
-	public void setInstagramId(String instagram) {
+	public void setInstagram(String instagram) {
 		this.instagram = instagram;
 	}
 
@@ -63,7 +63,7 @@ public class ArtistSocialMediaLink implements Serializable {
 		return youtube;
 	}
 
-	public void setYoutubeId(String youtube) {
+	public void setYoutube(String youtube) {
 		this.youtube = youtube;
 	}
 
@@ -73,7 +73,7 @@ public class ArtistSocialMediaLink implements Serializable {
 		return facebook;
 	}
 
-	public void setFacebookId(String facebook) {
+	public void setFacebook(String facebook) {
 		this.facebook = facebook;
 	}
 
@@ -83,7 +83,7 @@ public class ArtistSocialMediaLink implements Serializable {
 		return twitter;
 	}
 
-	public void setTwitterId(String twitter) {
+	public void setTwitter(String twitter) {
 		this.twitter = twitter;
 	}
 }

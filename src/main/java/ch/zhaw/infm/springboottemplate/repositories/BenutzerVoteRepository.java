@@ -9,4 +9,6 @@ public interface BenutzerVoteRepository extends JpaRepository<BenutzerVote,Long>
 	
 	List<BenutzerVote> findByArtistArtistId(Long id);
 	
+	Long deleteBybenutzerVoteId(Long benutzerVoteId); 
+	
 }

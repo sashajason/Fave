@@ -16,7 +16,6 @@ public class Veranstalter extends Benutzer {
 		return this.veranstaltungen;
 	}
 	
-	
 	private String firmenname;
 	
 	public String getFirmenname() {
