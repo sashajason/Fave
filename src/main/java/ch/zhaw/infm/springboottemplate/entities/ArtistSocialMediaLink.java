@@ -24,7 +24,6 @@ public class ArtistSocialMediaLink implements Serializable {
 	}
 
 	public ArtistSocialMediaLink() {
-		super();
 	}
 
 	public ArtistSocialMediaLink(Artist artist) {

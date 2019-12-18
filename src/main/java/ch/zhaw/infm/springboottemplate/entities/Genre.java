@@ -15,7 +15,6 @@ public class Genre implements Serializable {
 	}
 
 	public Genre() {
-		super();
 	}
 
 	@Id

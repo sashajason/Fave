@@ -20,7 +20,6 @@ public class Veranstalter extends Benutzer {
 	}
 
 	public Veranstalter() {
-		super();
 	}
 
 	@ManyToMany

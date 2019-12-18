@@ -18,7 +18,6 @@ public class Benutzer {
 	
 	public Benutzer()
 	{
-		super();
 	}
 
 	@Id

@@ -16,7 +16,6 @@ public class BenutzerVote {
 	}
 
 	public BenutzerVote() {
-		super();
 	}
 
 	@Id

@@ -23,7 +23,6 @@ public class Veranstaltung {
 	}
 
 	public Veranstaltung() {
-		super();
 	}
 
 	@Id

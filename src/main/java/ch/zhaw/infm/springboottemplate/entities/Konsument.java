@@ -18,7 +18,6 @@ public class Konsument extends Benutzer {
 	}
 
 	public Konsument() {
-		super();
 	}
 
 	private String name;

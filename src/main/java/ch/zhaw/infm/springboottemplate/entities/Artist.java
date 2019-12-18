@@ -25,7 +25,6 @@ public class Artist {
 	}
 	
 	public Artist() {
-		super();
 	}
 
 
