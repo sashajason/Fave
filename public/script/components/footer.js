@@ -6,6 +6,7 @@ Vue.component('footer-component', {
           <ul class="list-unstyled quick-links">
             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Kontakt</a></li>
           </ul>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4">

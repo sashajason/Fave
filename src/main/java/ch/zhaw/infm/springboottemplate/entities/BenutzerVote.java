@@ -19,6 +19,10 @@ public class BenutzerVote {
 	@OneToOne
 	private Artist artist;
 	
+    public Artist getArtist() {
+        return artist;
+    }
+	
 	private float investition;
 	
 	public float getInvestition() {

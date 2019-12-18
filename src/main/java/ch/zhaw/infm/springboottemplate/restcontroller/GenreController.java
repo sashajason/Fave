@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ch.zhaw.infm.springboottemplate.entities.BenutzerVote;
 import ch.zhaw.infm.springboottemplate.entities.Genre;
 import ch.zhaw.infm.springboottemplate.repositories.GenreRepository;
 
@@ -18,6 +19,16 @@ public class GenreController {
 	
 	@GetMapping("/fave/genre")
 	public ResponseEntity <List<Genre>> getAllGenres(){
-		return new ResponseEntity<List<Genre>>(genreRepository.findAll(),HttpStatus.OK);
+		
+		List<Genre> genres = genreRepository.findAll();
+
+		if (genres != null && !genres.isEmpty()) {
+			// ... dann diese als Body zurückgeben
+			return new ResponseEntity<List<Genre>>(genres, HttpStatus.OK);
+		} else {
+			// ... ansonsten ResourceNotFoundException (404)
+			return new ResponseEntity<List<Genre>>(HttpStatus.NOT_FOUND);
+		}
+	
 	}
 }

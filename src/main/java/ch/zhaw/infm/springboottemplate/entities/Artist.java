@@ -16,9 +16,9 @@ public class Artist {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int artistId;
+    private Long artistId;
 
-    public int getArtistId() {
+    public Long getArtistId() {
         return artistId;
     }
 

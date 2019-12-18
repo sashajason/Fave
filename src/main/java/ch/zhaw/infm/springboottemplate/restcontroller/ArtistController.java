@@ -17,6 +17,30 @@ public class ArtistController {
 
 	@GetMapping("/fave/artists")
 	public ResponseEntity<List<Artist>> getArtists() {
-		return new ResponseEntity<List<Artist>>(artistRepository.findAll(), HttpStatus.OK);
+		List<Artist> artists = artistRepository.findAll();
+		
+		if(artists != null && !artists.isEmpty()){
+            // ... dann diese als Body zurückgeben
+            return new ResponseEntity<List<Artist>>(artists, HttpStatus.OK);
+        } else {
+            // ... ansonsten ResourceNotFoundException (404)
+            return new ResponseEntity<List<Artist>>(HttpStatus.NOT_FOUND);
+        }
+		
 	}
+	
+	/*@GetMapping("/fave/artistsWithVeranstaltung")
+	public ResponseEntity<List<Artist>> getArtistsWithVernastaltung()
+	{
+				List<Artist> artists = artistRepository.findArtistsWithVeranstaltung(new java.util.Date());
+				
+				if(artists != null && !artists.isEmpty()){
+		            // ... dann diese als Body zurückgeben
+		            return new ResponseEntity<List<Artist>>(artists, HttpStatus.OK);
+		        } else {
+		            // ... ansonsten ResourceNotFoundException (404)
+		            return new ResponseEntity<List<Artist>>(HttpStatus.NOT_FOUND);
+		        }
+	}*/
+	
 }

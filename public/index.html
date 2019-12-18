@@ -5,7 +5,8 @@
   <!-- References -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <link rel="stylesheet" href="styles/style.css">
@@ -103,8 +104,8 @@
       <div class="row row-equal carousel-item active m-t-0">
         <div class="flex-container carousel-item-container">
           <div v-for="artist in artistsRow1">
-            <carouselcardcomponent class="flex-carousel-item" v-bind:imgsrc="artist.imgsrc"
-              v-bind:investition="artist.investition" v-bind:name="artist.name" v-bind:anzvotes="artist.anzvotes">
+            <carouselcardcomponent class="flex-carousel-item" v-bind:artist-image="artist.artistImage"
+              v-bind:investition="artist.investition" v-bind:name="artist.name" v-bind:anzvotes="artist.anzVotes">
             </carouselcardcomponent>
           </div>
         </div>
@@ -112,8 +113,8 @@
       <div class="row row-equal carousel-item m-t-0">
         <div class="flex-container carousel-item-container">
           <div v-for="artist in artistsRow2">
-            <carouselcardcomponent class="flex-carousel-item" v-bind:imgsrc="artist.imgsrc"
-              v-bind:investition="artist.investition" v-bind:name="artist.name" v-bind:anzvotes="artist.anzvotes">
+            <carouselcardcomponent class="flex-carousel-item" v-bind:artist-image="artist.artistImage"
+              v-bind:investition="artist.investition" v-bind:name="artist.name" v-bind:anzvotes="artist.anzVotes">
             </carouselcardcomponent>
           </div>
         </div>
@@ -121,21 +122,10 @@
     </div>
   </section>
 
-
-
-
-
-  <!-- Vergangene Veranstaltungen Carousel -->
+  <!-- Vergangene Veranstaltungen -->
   <section class="pastEvents-carousel slide mt-4" data-ride="carousel">
     <div class="container">
-
-      <div class="row mb-4">
-        <div class="col-xs-12 text-md-right lead">
-          <a class="btn btn-outline-secondary prevEvent"><i class="fa fa-lg fa-chevron-left"></i></a>
-          <a class="btn btn-outline-secondary nextEvent"><i class="fa fa-lg fa-chevron-right"></i></a>
-        </div>
-        <h4 class="ml-5">Vergangene Veranstaltungen</h4>
-      </div>
+      <h4 class="ml-5">Bevorstehende Veranstaltungen</h4>
     </div>
     <div class="container p-t-0 m-t-5 carousel-inner">
       <div class="row row-equal carousel-item active m-t-0">
@@ -155,12 +145,8 @@
               </div>
             </div>
           </div>
-
         </div>
-
-
       </div>
-
     </div>
   </section>
 
@@ -186,6 +172,7 @@
 
   <!-- <script src="https://unpkg.com/vue"></script> -->
 
+  <script src="script/carouselArtist.js"></script>
   <script src="script/carousel-navigation.js"></script>
   <script src="script/components/header.js"></script>
   <script src="script/components/footer.js"></script>

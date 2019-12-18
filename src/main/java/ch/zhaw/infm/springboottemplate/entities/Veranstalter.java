@@ -3,12 +3,13 @@ package ch.zhaw.infm.springboottemplate.entities;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
 public class Veranstalter extends Benutzer {
 
-	@OneToMany
+	@ManyToMany
 	private Set<Veranstaltung> veranstaltungen;
 	
 	public Set<Veranstaltung> getVeranstaltungen(){

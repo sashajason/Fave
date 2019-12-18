@@ -1,14 +1,14 @@
 Vue.component('carouselcardcomponent', {
-    data: function () {
-      return {}
-    },
-    props: ['artistImage', 'name', 'investition', 'anzvotes', 'artistid'],
-    template:
-      `<div>
+  data: function () {
+    return {}
+  },
+  props: ['artistImage', 'name', 'investition', 'anzvotes', 'artistid'],
+  template:
+    `<div>
           <div class="card">
         <!--Card image-->
         <div class="view">
-          <a href="artist.html"><img v-bind:src="artistImage" class="card-img-top" alt="photo"></a>
+          <img v-bind:src="artistImage" class="card-img-top" alt="photo">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
           </a>
@@ -31,56 +31,74 @@ Vue.component('carouselcardcomponent', {
         </div>
         </div>
       </div>`,
+})
+
+
+var carousel = new Vue(
+  {
+    el: '#favoritecarousel',
+    data: {
+      carouselArtists: [],
+      artistsRow1: [],
+      artistsRow2: [],
+    },
+
+    mounted: function () {
+      this.getArtists();
+    },
+    methods: {
+      getVoteInformation: async function (cartist) {
+        varInvestition = 0
+        varVotes = 0
+
+        await axios.get('http://localhost:8080/fave/artistVotes/' + cartist.id)
+          .then((response) => {
+
+            response.data.forEach(element => {
+              varVotes += 1;
+              varInvestition = varInvestition + element.investition
+            });
+
+            cartist.investition = varInvestition;
+            cartist.anzVotes = varVotes;
+            this.carouselArtists.push(cartist)
+
+          })
+      },
+
+
+      getCarouselitems: async function (totalartists) {
+
+        //Create the Carousel Artist Objects
+        for (var i = 0, len = totalartists.length; i < len; i++) {
+          element = totalartists[i]
+          var newCarouselArtist = new CarouselArtist(element.artistId, element.artistImage, element.name, element.beschreibung)
+          await this.getVoteInformation(newCarouselArtist)
+        };
+      },
+
+      getArtists: async function () {
+
+        axios.get('http://localhost:8080/fave/artists')
+          .then((response) => {
+            var totalartists = response.data
+            this.getCarouselitems(totalartists).then(this.fillCarouselArtists)
+
+          })
+      },
+
+      fillCarouselArtists: function () {
+        //Fill the Artist Rows in the Carousel 
+        for (i = 0; i < this.carouselArtists.length; i++) {
+          var artist = this.carouselArtists[i]
+
+          if (i < 4) {
+            this.artistsRow1.push(artist)
+          }
+          else if (i < 8) {
+            this.artistsRow2.push(artist)
+          }
+        }
+      },
+    }
   })
-  
-  
-  var carousel = new Vue(
-    {
-      el: '#favoritecarousel',
-      data: {
-        artistsRow1: [],
-        artistsRow2: []
-      },
-      mounted: function () {
-        this.getArtistsRow1();
-        // this.getArtistsRow2();
-      },
-      methods: {
-        getArtistsRow1: function () {
-          // HTTP.Request
-          // TODO: Get Names Array 
-  
-          axios.get('http://localhost:8080/fave/artists') 
-            .then((response) => {
-              for (i = 0; i < response.data.length; i++) {
-                if (i < 4) {
-                  this.artistsRow1.push(response.data[i])
-                }
-                else if (i < 8){
-                  this.artistsRow2.push(response.data[i])
-                }
-              }
-            })
-  
-          // var arrArtistsRow1 = []
-          // arrArtistsRow1.push({ id: "1", imgsrc: "Slides/wutang.jpg", name: "Wu-Tang Clan", investition: "2345.00", anzvotes: "645" })
-          // arrArtistsRow1.push({ id: "2", imgsrc: "Slides/mobb.jpg", name: "Mobb Deep", investition: "2345.00", anzvotes: "645" })
-          // arrArtistsRow1.push({ id: "3", imgsrc: "Slides/roots.jpg", name: "The Roots", investition: "2345.00", anzvotes: "645" })
-          // arrArtistsRow1.push({ id: "4", imgsrc: "Slides/cnn.jpg", name: "CNN", investition: "2345.00", anzvotes: "645" })
-  
-          // this.artistsRow1 = arrArtistsRow1
-        },
-        getArtistsRow2: function () {
-          // HTTP.Request
-          //  TODO: Get Names Array 
-          // var arrArtistsRow2 = []
-          // arrArtistsRow2.push({ id: "5", imgsrc: "Slides/apollo.jpg", name: "Apollo Brown", investition: "2345.00", anzvotes: "645" })
-          // arrArtistsRow2.push({ id: "6", imgsrc: "Slides/immortal.jpg", name: "Immortal Technique", investition: "2345.00", anzvotes: "645" })
-          // arrArtistsRow2.push({ id: "7", imgsrc: "Slides/lox.jpg", name: "The LOX", investition: "2345.00", anzvotes: "645" })
-          // arrArtistsRow2.push({ id: "8", imgsrc: "Slides/gibbs.jpg", name: "Freddie Gibbs", investition: "2345.00", anzvotes: "645" })
-          // this.artistsRow2 = arrArtistsRow2
-        },
-  
-  
-      }
-    })
